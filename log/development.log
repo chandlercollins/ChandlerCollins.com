@@ -1,0 +1,60 @@
+  [1m[36m (1.6ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (2.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (2.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePosts (20120323012656)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "slug" varchar(255), "content" text, "draft" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120323012656')
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Migrating to AddSessionsTable (20120323030346)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("sessions")
+  [1m[36m (0.3ms)[0m  [1mCREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("sessions")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [1m[35m (0.5ms)[0m  CREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120323030346')[0m
+  [1m[35m (1.7ms)[0m  commit transaction
+Migrating to SetPostDefaultToDraft (20120323043430)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (16.7ms)[0m  CREATE TEMPORARY TABLE "altered_posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "slug" varchar(255), "content" text, "draft" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("posts")[0m
+  [1m[35m (0.3ms)[0m  SELECT * FROM "posts"
+  [1m[36m (3.2ms)[0m  [1mDROP TABLE "posts"[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "slug" varchar(255), "content" text, "draft" boolean DEFAULT 't', "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("altered_posts")[0m
+  [1m[35m (1.4ms)[0m  SELECT * FROM "altered_posts"
+  [1m[36m (1.5ms)[0m  [1mDROP TABLE "altered_posts"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120323043430')
+  [1m[36m (6.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddAsideToPosts (20120323052330)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (8.5ms)[0m  [1mALTER TABLE "posts" ADD "aside" boolean DEFAULT 'f'[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120323052330')
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddUrlToPosts (20120327204225)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mALTER TABLE "posts" ADD "url" varchar(255)[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120327204225')
+  [1m[36m (58.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.9ms)[0m  select sqlite_version(*)
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("posts")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_sessions_on_updated_at')
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePosts (20120323012656)
+Migrating to AddSessionsTable (20120323030346)
+Migrating to SetPostDefaultToDraft (20120323043430)
+Migrating to AddAsideToPosts (20120323052330)
+Migrating to AddUrlToPosts (20120327204225)
+  [1m[35m (0.7ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("posts")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_sessions_on_updated_at')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_sessions_on_session_id')[0m

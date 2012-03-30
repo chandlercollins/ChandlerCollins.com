@@ -1,0 +1,512 @@
+/*! normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
+
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/*
+ * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+/*
+ * Prevents modern browsers from displaying 'audio' without controls
+ * Remove excess height in iOS5 devices
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/*
+ * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+ * Known issue: no IE6 support
+ */
+
+[hidden] {
+    display: none;
+}
+
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+
+html {
+    font-size: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+
+/*
+ * Addresses font-family inconsistency between 'textarea' and other form elements.
+ */
+
+html,
+button,
+input,
+select,
+textarea {
+    font-family: sans-serif;
+}
+
+/*
+ * Addresses margins handled incorrectly in IE6/7
+ */
+
+body {
+    margin: 0;
+}
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+/*
+ * Addresses outline displayed oddly in Chrome
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+
+a:hover,
+a:active {
+    outline: 0;
+}
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+/*
+ * Addresses font sizes and margins set differently in IE6/7
+ * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
+ */
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+}
+
+h3 {
+    font-size: 1.4em;
+    margin: 1em 0;
+}
+
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+}
+
+h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0;
+}
+
+h6 {
+    font-size: 0.75em;
+    margin: 2.33em 0;
+}
+
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+/*
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+*/
+
+b,
+strong {
+    font-weight: bold;
+}
+
+blockquote {
+    margin: 1em;
+    padding: 0 30px;
+    border-left: 8px solid lightblue;
+}
+
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+
+dfn {
+    font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+/*
+ * Addresses margins set differently in IE6/7
+ */
+
+p,
+pre {
+    margin: 1em 0;
+}
+
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+
+pre,
+code,
+kbd,
+samp {
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers
+ */
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/*
+ * 1. Addresses CSS quotes not supported in IE6/7
+ * 2. Addresses quote property not supported in S4
+ */
+
+/* 1 */
+
+q {
+    quotes: none;
+}
+
+/* 2 */
+
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+small {
+    font-size: 75%;
+}
+
+/*
+ * Prevents sub and sup affecting line-height in all browsers
+ * gist.github.com/413930
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+/*
+ * Addresses margins set differently in IE6/7
+ */
+
+dl,
+menu,
+ol,
+ul {
+    margin: 1em 0;
+}
+
+dd {
+    margin: 0 0 0 40px;
+}
+
+/*
+ * Addresses paddings set differently in IE6/7
+ */
+
+menu,
+ol,
+ul {
+    padding: 0 0 0 40px;
+}
+
+/*
+ * Corrects list images handled incorrectly in IE7
+ */
+
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * 1. Removes border when inside 'a' element in IE6/7/8/9, FF3
+ * 2. Improves image quality when scaled in IE7
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+
+img {
+    border: 0; /* 1 */
+    -ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/*
+ * Corrects overflow displayed oddly in IE9
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11
+ */
+
+figure {
+    margin: 0;
+}
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+/*
+ * Corrects margin displayed oddly in IE6/7
+ */
+
+form {
+    margin: 0;
+}
+
+/*
+ * Define consistent border, margin, and padding
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9
+ * 2. Corrects text not wrapping in FF3
+ * 3. Corrects alignment displayed oddly in IE6/7
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0;
+    white-space: normal; /* 2 */
+    *margin-left: -7px; /* 3 */
+}
+
+/*
+ * 1. Corrects font size not being inherited in all browsers
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+ * 3. Improves appearance and consistency in all browsers
+ */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+}
+
+/*
+ * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+ */
+
+button,
+input {
+    line-height: normal; /* 1 */
+}
+
+/*
+ * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+ * 2. Corrects inability to style clickable 'input' types in iOS
+ * 3. Removes inner spacing in IE7 without affecting normal text inputs
+ *    Known issue: inner spacing remains in IE6
+ */
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer; /* 1 */
+    -webkit-appearance: button; /* 2 */
+    *overflow: visible;  /* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9
+ * 2. Removes excess padding in IE8/9
+ * 3. Removes excess padding in IE7
+      Known issue: excess padding remains in IE6
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
+}
+
+/*
+ * 1. Addresses appearance set to searchfield in S5, Chrome
+ * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in S5, Chrome on OS X
+ */
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in FF3+
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9
+ * 2. Improves readability and alignment in all browsers
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+/*
+ * Remove most spacing between table cells
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+	My Changes(Delete if File Broken)
+	*/
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:hover,a:active{outline:0}h1{font-size:2em;margin:0.67em 0}h2{font-size:1.5em;margin:0.83em 0}h3{font-size:1.4em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:0.83em;margin:1.67em 0}h6{font-size:0.75em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em;padding:0 30px;border-left:8px solid lightblue}dfn{font-style:italic}mark{background:#ff0;color:#000}p,pre{margin:1em 0}pre,code,kbd,samp{font-family:monospace, serif;_font-family:'courier new', monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:75%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;*overflow:visible}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}img{border:0;-ms-interpolation-mode:bicubic;vertical-align:middle}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}figure.hover_select{position:absolute;right:30px;top:70px;width:100px;height:100px;text-align:center}figure.hover_select.poke{position:relative;top:auto;right:auto;width:150px;height:200px;float:left}figure.hover_select div.circle{position:relative;display:block;width:40px;height:40px;border-radius:40px;background-color:transparent;border:4px solid #000;margin:0 auto}figure.hover_select.poke div.circle{width:100px;height:100px;border-radius:100px;border:10px solid #5b9819}figure.hover_select.poke.done div.circle{border:10px solid #000}figure.hover_select.done div.filled{display:none}figure.hover_select div.filled{position:absolute;background-color:#000;width:40px;height:40px;-webkit-border-radius:40px;-moz-border-radius:40px;border-radius:40px;top:0px;-webkit-transform:scale(0.2);-moz-transform:scale(0.2)}figure.hover_select.poke div.filled{position:absolute;background-color:#5b9819;width:100px;height:100px;-webkit-border-radius:100px;-moz-border-radius:100px;border-radius:100px;top:0px;-webkit-transform:scale(0.2);-moz-transform:scale(0.2)}figure.hover_select.animate div.filled{-webkit-animation-name:hoverPulse;-moz-animation-name:hoverPulse;-webkit-animation-duration:3s;-moz-animation-duration:3s;-webkit-animation-iteration-count:infinite;-moz-animation-iteration-count:infinite;-webkit-animation-timing-function:linear;-moz-animation-timing-function:linear}figure.hover_select:hover div.filled{-webkit-animation-name:hoverSelect;-moz-animation-name:hoverSelect;-webkit-animation-duration:1s;-moz-animation-duration:1s;-webkit-animation-iteration-count:1;-moz-animation-iteration-count:1;-webkit-animation-timing-function:linear;-moz-animation-timing-function:linear}p.no_posts{font-size:25px;line-height:35px;padding-right:0px;margin-left:180px;margin-top:20px;margin-bottom:20px}@-moz-keyframes hoverSelect{0%{-moz-transform:scale(0.1)}100%{-moz-transform:scale(1.1)}}@-webkit-keyframes hoverSelect{0%{-webkit-transform:scale(0.1)}100%{-webkit-transform:scale(1.1)}}@-webkit-keyframes hoverPulse{0%{-webkit-transform:scale(0.2)}50%{-webkit-transform:scale(0.35)}100%{-webkit-transform:scale(0.2)}}@-moz-keyframes hoverPulse{0%{-moz-transform:scale(0.2)}50%{-moz-transform:scale(0.35)}100%{-moz-transform:scale(0.2)}}div.notification{border:1px solid #a9a9a9;border-radius:5px;background-color:#fff;position:fixed;top:50%;left:50%;width:350px;margin-left:-250px;margin-top:-180px;box-shadow:0px 0px 3px #a9a9a9;z-index:999999;display:none;text-align:center}a.hover_select.notify{position:relative;left:43%;top:40px;margin-bottom:30px}div.notification p{padding:40px;padding-top:15px;padding-bottom:25px;font-weight:500;margin:0;line-height:20px}div.notification.explain_kudos p.disclaimer{font-size:13px;color:#ccc;font-weight:400;margin-bottom:15px}div.notification p strong{font-weight:700;font-size:37px;display:block;margin-bottom:30px;margin-top:20px}nav.pagination span{display:none}nav.pagination span a{text-transform:uppercase;text-decoration:none;font-weight:800;border:none;font-size:16px;color:#252729}nav.pagination span.next:hover,nav.pagination span.prev:hover{opacity:0.7}nav.pagination span.next{display:block;float:right}nav.pagination span.next a{width:123px;height:27px;background:url(/images/navigation/next_button.png) center center no-repeat;text-indent:-9999px;display:block}nav.pagination span.prev{display:block;float:left}nav.pagination span.prev a{width:123px;height:27px;background:url(/images/navigation/prev_button.png) center center no-repeat;text-indent:-9999px;display:block}p.draft_notice{color:#eb3d0e;font-size:40px;font-weight:700;line-height:45px}code{border-left:10px solid #000;padding-left:20px;margin-left:0px;font-size:15px;line-height:25px;margin-top:0px;margin-bottom:20px;color:#4D4D4D;font-family:'proxima-nova', sans-serif;display:block}pre{display:block}header#simple h1#master_logo{width:100px;height:100px;z-index:9999;position:absolute;left:0px;top:0px;width:100px;height:100px;z-index:9999;padding-top:0px;padding-left:30px;padding-top:50px;margin:0}h1#master_logo a{font-family:"freight-sans-pro", sans-serif;font-weight:900;font-size:38px;line-height:60px;border:4px solid #000}h1#master_logo a.pulsation{display:block;width:45px;height:45px;border-radius:45px;-moz-border-radius:45px;-webkit-border-radius:45px;background-color:#fff;position:relative;overflow-y:none;border:4px solid #000}h1#master_logo a.pulsation.done{background:#000 url(/images/icons/checkmark_white.png) center center no-repeat}h1#master_logo a.pulsation div.pie_selected{position:relative;width:25px;height:25px;margin:0 auto;top:50%}h1#master_logo a.pulsation.animate div.pie_selected{-webkit-animation-name:logoPulse;-webkit-animation-duration:100s;-webkit-animation-iteration-count:infinite;-webkit-animation-timing-function:linear;-moz-animation-name:logoPulse;-moz-animation-duration:100s;-moz-animation-iteration-count:infinite;-moz-animation-timing-function:linear}@-webkit-keyframes pulsationHover{0%{width:8px;height:8px;margin-top:-4px;border-radius:8px;background-color:#000}100%{width:40px;height:40px;margin-top:-20px;border-radius:40px;background-color:#000}}@-moz-keyframes pulsationHover{0%{width:8px;height:8px;margin-top:-4px;border-radius:8px;background-color:#000}100%{width:40px;height:40px;margin-top:-20px;border-radius:40px;background-color:#000}}header#simple figure#logo_blog{margin:0;padding:0;width:auto;height:auto;position:absolute;left:32px;top:35px;width:100px;height:100px;display:block;border:5px solid #f8f8f8;border-radius:50%;color:#000;-webkit-transition-property:all;-webkit-transition-duration:0.7s;-webkit-transition-timing-function:ease-in-out;-moz-transition-property:all;-moz-transition-duration:0.7s;-moz-transition-timing-function:ease-in-out}header#simple figure#logo_blog.start{top:-200px}header#simple figure#logo_blog a{display:block;position:relative;text-indent:-9999px;border-radius:50%;width:60px;height:60px;top:50%;left:50%;z-index:999;margin-top:-30px;margin-left:-30px;background-color:#000;background-position:center center;background-repeat:no-repeat}span.dot_pulse{position:absolute;left:-5px;top:-5px;margin:0;padding:0;width:90px;height:90px;z-index:10;background-color:transparent;border:10px solid #FF8E1E;-webkit-animation-name:dotPulse;-moz-animation-name:dotPulse;-webkit-animation-duration:3s;-moz-animation-duration:3s;-webkit-animation-iteration-count:infinite;-moz-animation-iteration-count:infinite;-webkit-animation-timing-function:linear;-moz-animation-timing-function:linear;opacity:0.2;border-radius:50%}@-webkit-keyframes 'dotPulse'{0%{-webkit-transform:scale(0);opacity:0}10%{-webkit-transform:scale(0.3);opacity:0}30%{-webkit-transform:scale(0.7);opacity:0.2}100%{opacity:0;-webkit-transform:scale(0.9)}}@-moz-keyframes dotPulse{0%{-moz-transform:scale(0);opacity:0}10%{-moz-transform:scale(0.3);opacity:0.2}30%{-moz-transform:scale(0.7);opacity:0.1}100%{opacity:0;-moz-transform:scale(1)}}nav#service_hook{position:absolute;top:50px;right:50px;border-radius:4px;display:block;width:60px;height:40px;background:#000 url(/images/misc/down_arrow_tiny_white.png) 37px 50% no-repeat;z-index:9999;display:block}nav#service_hook a{color:#fff;text-decoration:none;background:url(/images/misc/lightning_small_nav.png) center center no-repeat;width:35px;height:40px;text-indent:-9999px;display:block;position:relative;text-decoration:none;border:none}ul#magic_bar{border:1px solid #a9a9a9;border-radius:5px;background-color:#fff;position:absolute;top:110px;right:40px;width:250px;box-shadow:0px 0px 3px #a9a9a9;z-index:999;display:none}ul#magic_bar li{display:block}ul#magic_bar li a{line-height:55px;border-bottom:1px solid #dfdfdf;display:block;font-size:19px;padding-left:55px;text-decoration:none;background:url(/images/navigation/circle.png) 15px 14px no-repeat}ul#magic_bar li.catch p{line-height:20px;margin-bottom:0px;margin-top:0px;border-bottom:1px solid #dfdfdf;padding:25px;padding-left:15px;font-size:35px;font-weight:900;color:#000}ul#magic_bar li.dashboard a{background-image:url(/images/navigation/dashboard.png)}ul#magic_bar li.logout a,ul#magic_bar li.login a{background-image:url(/images/navigation/logout.png)}ul#magic_bar li.settings a{background-image:url(/images/navigation/settings.png)}ul#magic_bar li.blog a{background-image:url(/images/navigation/blog.png)}ul#magic_bar li.write a,ul#magic_bar li.signup a{background-image:url(/images/navigation/write.png)}ul#magic_bar li a:hover{background-color:#f8f8f8}ul#magic_bar li a:active{background-color:#e2e2e2}ul#magic_bar li{clear:both;display:block}ul#magic_bar li.triangle{background:transparent url(/images/navigation/triangle.png) top right no-repeat;margin-top:-14px;margin-right:25px}ul#magic_bar li:nth-child(2) a:hover{border-top-right-radius:5px;border-top-left-radius:5px}ul#magic_bar li:last-child a:hover{border-bottom-right-radius:5px;border-bottom-left-radius:5px}ul#magic_bar li.photo{margin-bottom:5px;display:block;box-shadow:inset 0px 0px 10px #000;background:#444 url(/images/navigation/chemist.png) -150px -30px no-repeat;height:70px}li.padded{padding:30px;padding-left:50px;padding-right:50px}a.buttonize:hover{color:#fff}aside#network_blog.start{width:251px;overflow:hidden}aside#network_blog{position:absolute;left:0px;top:0px;bottom:0px;right:auto;background-color:#000;width:0px;z-index:99999;overflow:hidden;display:none;-webkit-transition-property:all;-webkit-transition-duration:1s;-webkit-transition-timing-function:ease-in-out;-moz-transition-property:all;-moz-transition-duration:1s;-moz-transition-timing-function:ease-in-out}aside#network_blog.bigsite{position:fixed}div.identify{display:none;margin-top:100px;position:fixed;left:60px;top:0px;z-index:999999;-webkit-transition-property:all;-webkit-transition-duration:0.7s;-webkit-transition-timing-function:ease-in-out;-moz-transition-property:all;-moz-transition-duration:1s;-moz-transition-timing-function:ease-in-out}div.identify.die{-webkit-transform:scale(0.2);-moz-transform:scale(0.2);left:-200px;opacity:0}div.identify h3{background-position:center center;background-repeat:no-repeat;border-radius:50%;border:10px solid #fff;width:100px;height:100px;margin:0 auto}div.identify p.name{font-weight:800;text-align:center;display:block;color:#fff;font-size:30px;padding-top:50px}aside#network_blog a{display:block;position:absolute;left:0px;right:0px;top:0px;bottom:0px}aside#network_blog h4{color:#fff;text-transform:uppercase;margin:0px;padding:0px;padding-top:5px;width:200px;-webkit-transform:rotate(-90deg);-moz-transform:rotate(-90deg);-o-transform:rotate(-90deg);-webkit-transform-origin:top left;-moz-transform-origin:top left;-o-transform-origin:top left;position:absolute;bottom:0px}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}aside{position:relative;display:block}ul{list-style-type:none}.hide{visibility:hidden;height:1px;clip:rect(0 0 0 0);position:absolute}input,textarea{outline:none;background:none}body{background:#fff;color:#222}body,textarea,pre,input{font-family:'Lato', Helvetica, sans-serif;line-height:1.8em;font-size:16px;font-weight:400}h1,h2,h3,h4,h5{font-weight:900;word-wrap:break-word;line-height:1.3em}h1,.expandingArea.text-title pre,.expandingArea.text-title textarea{font-weight:900;font-size:35px}p{color:#555}a,a:visited a:active{color:#000;text-decoration:none;border-bottom:1px solid #ddd}a:hover{color:red}header{width:162px;border-right:1px solid #DDD;position:fixed;top:0;bottom:0;padding:20px 40px}header span{color:#888;font-weight:500}header span.powered-by{position:absolute;bottom:20px;font-size:11px}header ul{padding:0;margin:50px 0}header li{margin:0 0 3px 0}header li a{padding:2px 0;color:#888;border-bottom:2px solid #eee}header li a:hover{border-color:#777;color:#444}#container{margin-left:243px;position:relative}#container time{display:block;padding:20px 0 20px 50px;text-transform:uppercase;font-weight:900;font-size:12px;border-bottom:1px solid #ddd}#content section{padding:26px 0 40px 50px;border-bottom:1px solid #ddd;position:relative}#content h1.aside{font-size:18px}.show #content section{border-bottom:none}code{font-size:13px;background:#F2F2F2;padding:20px;margin:20px;display:block}.contain,#new_post,.edit_post{width:580px}.contain img{max-width:100%;height:auto}#new_post,.edit_post{padding:40px 0;margin:0 auto}fieldset.markdown{position:relative;border:none;margin:0;padding:0}.markdown::before{display:block;content:"";width:39px;height:24px;position:absolute;top:4px;left:-60px;background:url(/assets/markdown.png) no-repeat top left}#post_title{width:100%;border:none;background:none;line-height:45px;margin:0 0 20px 0}#post_content{border:none;width:100%;position:relative;margin:0 0 80px 0}#publish-bar{position:fixed;bottom:0;left:0;background:#222;color:#fff;width:100%;text-align:center;padding:20px 0}#publish-bar .contain{margin:0 auto;width:700px}#publish-bar input[type=submit],#publish-bar a,.button{display:inline-block;background:#000;padding:10px;font-weight:bold;border:none;color:#fff;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px}.button.secondary{padding:0 5px;background:#aaa;font-size:12px}#publish-bar input[type=submit]:hover,#publish-bar a:hover,.col h1 a:hover,.col h2 a:hover,.button:hover,.button.secondary:hover{background:red;color:#fff}.button.space-top{margin-top:100px}.left{float:left}.right{float:right}.actions{position:absolute;top:10px;right:10px;font-size:12px;margin:0;padding:0}.actions li{display:inline-block;margin:0 10px 0 0}label{font-size:20px;color:#fff;font-weight:bold;margin:0 4px 0 15px}#post_draft{position:relative;margin:0 20px 0 0}.admin-links{position:absolute;text-align:right;top:18px;right:20px;margin:0}.admin-links li{float:left;margin-left:6px}.admin-links a{float:left}.notice{background:lightYellow;width:100%;display:block;text-align:center;padding:6px 0}#admin{width:808px;margin:0 auto;position:relative}#admin #drafts{float:left;border:4px solid #000;border-top:none;background:#fff;margin:0 0 20px 0;padding-top:10px}#admin #drafts form{margin:20px 0 20px -20px;padding:0 0 0 20px;border-left:4px solid lightblue}#admin #drafts #post_title{width:350px;font-size:16px;font-weight:400;margin:0;border-bottom:1px solid #ddd}#admin #published{float:right}#admin #published h2{color:#999}#admin #published h2 a{margin-top:-2px}#admin .col h1,#admin .col h2{position:relative;text-transform:uppercase}#admin .col h1 a,#admin .col h2 a{position:absolute;top:0;right:0;font-size:12px;padding:2px 10px;line-height:2.7em;margin:5px 0 0}#admin .col{width:360px;padding:20px}#admin .col h2 a{background:#999}#admin .col h2 a:hover{background:red}#admin .col ul{padding:0}#admin .col ul li{border-bottom:1px solid #ddd;padding:15px;position:relative}#admin .col ul li:hover .links{visibility:visible}#admin .col ul li .links{position:absolute;right:0;top:14px;background:#fff;padding:1px 8px;visibility:hidden}#admin .col ul li .links a{color:#999;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px}#admin .col ul li .links a:hover{color:red}#admin .col ul li h3{margin:0;font-size:16px;max-width:100%;text-overflow:ellipsis;overflow:hidden}#admin .col ul li h3 a{border:none}#admin textarea,#admin pre{margin:0;padding:0;outline:0;border:0}#admin .expandingArea{position:relative}#admin .expandingArea>textarea,#admin .expandingArea>pre{background:transparent;white-space:pre-wrap;word-wrap:break-word}#admin .expandingArea>textarea{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;width:100%;height:100px}#admin .expandingArea.active>textarea{overflow:hidden;position:absolute;top:0;left:0;height:100%;resize:none}#admin .expandingArea>pre{display:none}#admin .expandingArea.active>pre{display:block;visibility:hidden}.admin-view{font-size:11px;margin:0 10px 2px 0;font-weight:900;text-transform:uppercase}nav.pagination{position:absolute;bottom:20px;right:20px;font-size:16px;font-weight:900;text-transform:uppercase;margin:0;padding:0}
+
