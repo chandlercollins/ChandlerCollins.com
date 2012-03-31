@@ -12,6 +12,10 @@
 <body class="<%= controller_name %> <%= action_name %>">
   <% unless @no_header %>
   <header>
+  	<figure id="logo_blog" class="">
+		<a href="/" style="background-image: url(http://postimage.org/image/f8emk5o7l/);">ccollins</a>
+		<span class="dot_pulse"></span>
+	</figure>
     <h1><%= link_to CONFIG['title'], root_url %></h1>
     <span><%= CONFIG['tagline'].html_safe %></span>
     <ul>
