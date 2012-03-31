@@ -9,21 +9,19 @@
   <link href='http://fonts.googleapis.com/css?family=Lato:300,900' rel='stylesheet' type='text/css' />
 </head>
 
-<!-- ============================================================ -->
-<!-- ! <body class="<%= controller_name %> <%= action_name %>">   -->
-<!-- ============================================================ -->
-
-<!-- =========================== -->
-<!-- ! <% unless @no_header %>   -->
-<!-- =========================== -->
-<body>
+<body class="<%= controller_name %> <%= action_name %>">
+  <% unless @no_header %>
   <header id="simple">
-  	<!-<h1><!-- ================================================= -->
-<!-- ! <%= link_to CONFIG['title'], root_url %></h1>   -->
-<!-- ================================================= -->
-    <!-- =================================================== -->
-<!-- ! <span><%= CONFIG['tagline'].html_safe %></span>   -->
-<!-- =================================================== -->
+  	<h1><%= link_to CONFIG['title'], root_url %></h1>
+    <span><%= CONFIG['tagline'].html_safe %></span>
+      <div class="identify die" style="display: block; ">
+	<h3 style="background-image: url(http://postimage.org/image/7khzfthmj/);">&nbsp;</h3>
+	<p class="name">ccollins</p>
+</div>
+    <figure id="logo_blog" class="">
+		<a href="/" style="background-image: url(http://postimage.org/image/f8emk5o7l/);"> </a>
+		<span class="dot_pulse"></span>
+	</figure>
     <ul id = "user_info">
     	<li class = "website">
     		<a href="chandlercollins.com">chandlercollins.com</a>
@@ -38,17 +36,6 @@
     		<a href="/posts.rss">rss feed</a>
     	</li>
    </ul>
-   
-   <figure id="logo_blog" class="">
-		<a href="/" style="background-image: url(http://postimage.org/image/f8emk5o7l/);"> </a>
-		<span class="dot_pulse"></span>
-	</figure>
-	
-   <div class="identify die" style="display: block; ">
-	<h3 style="background-image: url(http://postimage.org/image/7khzfthmj/);">&nbsp;</h3>
-	<p class="name">ccollins</p>
-</div>
-    
    
     <span class="powered-by">
       Powered by <a href="http://github.com/natew/obtvse.git">Obtvse</a>
