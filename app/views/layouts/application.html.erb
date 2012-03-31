@@ -22,7 +22,13 @@
 		<a href="/" style="background-image: url(http://postimage.org/image/f8emk5o7l/);"> </a>
 		<span class="dot_pulse"></span>
 	</figure>
-    <ul>
+    <ul id = "user_info">
+    	<li class = "website">
+    		<a href="chandlercollins.com">chandlercollins.com</a>
+    	</li>
+    	<li class="twitter">
+    		<a href="https://twitter.com/#!/chanman_82">@chanman_82</a>
+    	</li>
       <% if CONFIG['twitter'] %>
         <li><%= link_to '@' + CONFIG['twitter'], 'http://twitter.com/' + CONFIG['twitter'] %></li>
       <% end %>
@@ -32,6 +38,7 @@
       <li><%= link_to 'say hi', "mailto:#{CONFIG['email']}?subject:whats up!" %></li>
       <li><%= link_to 'rss feed', '/posts.rss' %></li>
     </ul>
+   
     <span class="powered-by">
       Powered by <a href="http://github.com/natew/obtvse.git">Obtvse</a>
       <% if is_admin? %> &nbsp;&middot;&nbsp; <a href="/admin">Admin</a><% end %>
