@@ -11,11 +11,13 @@
   <link href="http://fast.svbtle.com/cargo/build.blog-346839782c3460df0704143b9b715553.css" media="screen" rel="stylesheet" type="text/css" />
 <meta content="GO1y4d00Wy3b4MEOrut4IRp3d0THpiazytJlWHkcDqo=" name="csrf-token" /></head>
 
-<body class="<%= controller_name %> <%= action_name %>">
-  <% unless @no_header %>
-  <header id="simple">
-  	<h1><%= link_to CONFIG['title'], root_url %></h1>
-    <span><%= CONFIG['tagline'].html_safe %></span>
+<body>
+<section id = "conductor">
+	<header>
+		<h1 class="hide">Chandler Collins</h1>
+	<h2 class="hide">Hi, I'm Chandler. Follow me as I live my life and share all of the interesting things that I find along the way.</h2>
+		<h3 class ="date">March 31, 2012</h3>
+	</header>
       <div class="identify die" style="display: block; ">
 	<h3 style="background-image: url(http://postimage.org/image/7khzfthmj/);">&nbsp;</h3>
 	<p class="name"> </p>
@@ -242,7 +244,7 @@ header#simple h3 a {
 
 ul#user_info {
 	position: relative;
-	left: 30px;
+	left: 25px;
 	top: 50px;	
 }
 
