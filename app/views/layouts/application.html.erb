@@ -1,29 +1,46 @@
 <!doctype html>
 <html lang="en-US">
 <head>
+  <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
   <title><%= html_title yield(:title) %></title>
   <%= csrf_meta_tag %>
-  <%= stylesheet_link_tag 'application' %>
+  <%= stylesheet_link_tag "application.css" %>
   <meta name="author" content="<%= CONFIG['name'] %>">
   <link href="/posts.rss" rel="alternate" title="RSS" type="application/rss+xml" />
   <link href='http://fonts.googleapis.com/css?family=Lato:300,900' rel='stylesheet' type='text/css' />
-</head>
+  <link href="http://fast.svbtle.com/cargo/build.blog-346839782c3460df0704143b9b715553.css" media="screen" rel="stylesheet" type="text/css" />
+<meta content="GO1y4d00Wy3b4MEOrut4IRp3d0THpiazytJlWHkcDqo=" name="csrf-token" /></head>
 
-<body class="<%= controller_name %> <%= action_name %>">
-  <% unless @no_header %>
-  <header>
-    <h1><%= link_to CONFIG['title'], root_url %></h1>
-    <span><%= CONFIG['tagline'].html_safe %></span>
-    <ul>
-      <% if CONFIG['twitter'] %>
-        <li><%= link_to '@' + CONFIG['twitter'], 'http://twitter.com/' + CONFIG['twitter'] %></li>
-      <% end %>
-      <% if CONFIG['github'] %>
-        <li><%= link_to 'github', 'https://github.com/' + CONFIG['github'] %></li>
-      <% end %>
-      <li><%= link_to 'say hi', "mailto:#{CONFIG['email']}?subject:whats up!" %></li>
-      <li><%= link_to 'rss feed', '/posts.rss' %></li>
-    </ul>
+<body>
+<section id = "conductor">
+	<header>
+		<h1 class="hide">Chandler Collins</h1>
+	<h2 class="hide">Hi, I'm Chandler. Follow me as I live my life and share all of the interesting things that I find along the way.</h2>
+		<h3 class ="date">March 31, 2012</h3>
+	</header>
+      <div class="identify die" style="display: block; ">
+	<h3 style="background-image: url(http://postimage.org/image/7khzfthmj/);">&nbsp;</h3>
+	<p class="name"> </p>
+</div>
+    <figure id="logo_blog" class="">
+		<a href="http://postimage.org/image/f8emk5o7l/" style="background-image: url(http://postimage.org/image/f8emk5o7l/);">ccollins</a>
+		<span class="dot_pulse"></span>
+	</figure>
+    <ul id = "user_info">
+    	<li class = "website">
+    		<a href="chandlercollins.com">chandlercollins.com</a>
+    	</li>
+    	<li class="twitter">
+    		<a href="https://twitter.com/#!/chanman_82">@chanman_82</a>
+    	</li>
+    	<li class="facebook">
+    		<a href="http://www.facebook.com/profile.php?id=100000096023216">facebook</a>
+    	</li>
+    	<li class="rss">
+    		<a href="/posts.rss">rss feed</a>
+    	</li>
+   </ul>
+   
     <span class="powered-by">
       Powered by <a href="http://github.com/natew/obtvse.git">Obtvse</a>
       <% if is_admin? %> &nbsp;&middot;&nbsp; <a href="/admin">Admin</a><% end %>
@@ -52,266 +69,7 @@
       g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
-  <% end %>
-  <!-- ============================================================================= -->
-<!-- ! All Changes Below made by Chandler Collins. Delete if anything goes wrong   -->
-<!-- ============================================================================= -->
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
-audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
-audio:not([controls]) { display: none; }
-[hidden] { display: none; }
-
-
-::-moz-selection { background: #777777; color: #fff; text-shadow: none; }
-::selection { background: #777777; color: #fff; text-shadow: none; }
-
-a { color: #00e; } 
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
-a:focus { outline: thin dotted; }
-a:hover, a:active { outline: 0; }
-
-abbr[title] { border-bottom: 1px dotted; }
-b, strong { font-weight: bold; }
-blockquote { margin: 1em 40px; }
-dfn { font-style: italic; }
-hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
-ins { background: #ff9; color: #000; text-decoration: none; }
-mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
-pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
-pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
-q { quotes: none; }
-q:before, q:after { content: ""; content: none; }
-small { font-size: 85%; }
-sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
-ul, ol { margin: 0; padding: 0px; }
-dd { margin: 0 0 0 40px; }
-nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
-img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
-svg:not(:root) { overflow: hidden; }
-figure { margin: 0; }
-
-form { margin: 0; }
-fieldset { border: 0; margin: 0; padding: 0; }
-label { cursor: pointer; }
-legend { border: 0; *margin-left: -7px; padding: 0; }
-button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
-button, input { line-height: normal; *overflow: visible; }
-table button, table input { *overflow: auto; }
-button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
-input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
-input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
-input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
-button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
-textarea { overflow: auto; vertical-align: top; resize: vertical; }
-input:valid, textarea:valid {  }
-input:invalid, textarea:invalid { background-color: #f0dddd; }
-
-table { border-collapse: collapse; border-spacing: 0; }
-td { vertical-align: top; }
-
-ul {
-	list-style-type: none;
-}
-
-.hide {
-	display: none;
-}
-
-/* Annnd, done. */
-aside {
-	position: relative;
-	display: block;
-}
-
-a,
-a:link,
-a:visited,
-a:active {
-	color: #000;
-	text-decoration: none;
-
-	border-bottom: 1px solid #ccc;
-}
-
-a.anchor,
-a.anchor:visited {
-	color: #777;
-	border: none;
-	padding-left: 10px;
-}
-
-header#simple {
-	width: 185px;
-	position: fixed;
-	left: 10px;
-	top: 0px;
-	bottom:1px;
-	border-right: 1px solid #e2e2e2;
-	background-color: #fff;
-	z-index: 9999;
-	border-bottom: 1px solid #e2e2e2;
-}
-
-header#simple.bigsite {
-	position: fixed;
-	border-bottom: 0px;
-	bottom: 0px;
-}
-
-p.networkify {
-	position: absolute;
-	left: 30px;
-	bottom: 20px;
-	z-index: 99999;
-	color: #000;
-	color: #e9e9e9;
-	font-size: 12px;
-	margin: 0;
-}
-
-section#conductor {
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	left: 250px;
-}
-
-header#simple h1 {
-	width: 250px;
-	margin: 0 auto;
-	padding-top: 150px;
-	padding-left: 30px;
-}
-
-header#simple h1 a {
-	font-family: "freight-sans-pro", sans-serif;
-	font-weight: 900;
-	font-size: 38px;
-	line-height: 60px;
-	border: none;
-}
-
-header#simple h2 {
-	padding-left: 30px;
-	padding-right: 35px;
-	font-weight: 300;
-	margin: 0px;
-	margin-top: 10px;
-
-	font-size: 18px;
-	line-height: 25px;
-
-	color: #585c60;
-}
-
-header#simple h3 {
-	padding-left: 30px;
-	padding-right: 35px;
-	font-weight: 300;
-	margin: 0px;
-	margin-top: 10px;
-
-	font-size: 16px;
-	line-height: 25px;
-
-	color: #ccc;
-}
-
-header#simple h3 a {
-	border: none;
-	color: #999;
-}
-
-ul#user_info {
-	position: relative;
-	left: 25px;
-	top: 50px;	
-}
-
-ul#user_info li {
-	clear: both;
-	display: block;
-	float: none;
-	padding-top: 10px;
-	padding-bottom: 20px;
-}
-
-ul#user_info li a {
-	font-size: 16px;
-	border: 3px solid #f8f8f8;
-	border-radius: 30px;
-	background-color: #fff;
-	z-index: 999;
-	padding: 7px;
-	padding-left: 15px;
-	padding-right: 15px;
-	color: #999;
-}
-
-ul#user_info li a:hover {
-	color: #000;
-	border: 3px solid #777;
-}
-
-
-section#conductor header {
-	display: block;
-	border-bottom: 1px solid #e2e2e2;
-	padding: 40px;
-	padding-left: 50px;	
-}
-
-h3.date {
-	text-transform: uppercase;
-	color: #000;
-	font-weight: 700;
-	font-size: 14px;
-	letter-spacing: 1px;
-	padding-left: 0px;
-	line-height: 33px;
-}
-
-ul.posts {
-	display: block;
-	position: absolute;
-	left: 0px;
-	right: 0px;
-	text-align: left;
-	min-width: 700px;
-}
-
-ul.posts li {
-	display: block;
-	border-bottom: 1px solid #e2e2e2;
-	position: relative;
-}
-
-ul.posts li article {
-	width: 500px;
-	margin: 0;
-	margin-top: 0px;
-	padding-right: 0px;
-	padding: 40px;
-	padding-left: 50px;	
-}
-
-
-ul.posts li article ul li {
-	border: none;
-	margin-left: 0px;
-	padding-left: 25px;
-	margin-bottom: 30px;
-	border-left: 10px solid #f8f8f8;
-}
-
-
-ul.posts li.pagination {
-	padding-top: 30px;
-	padding-bottom: 90px;
-}
+    <style>
 
 article h2 a {
 	color: black;
@@ -384,13 +142,6 @@ article p.post_end a {
 	color: #777;
 	border-bottom: 1px solid #ccc;
 }
-
-
-
-
-
-
-
 a.buttonize {
 	padding-left: 30px;
 	padding-right: 30px;
@@ -511,11 +262,6 @@ figure.hover_select.poke.done p.kcount {
 figure.hover_select p.kcount.active {
 	font-size: 15px;
 	margin-top: 10px;
-}
-
-figure.hover_select.done div.circle {
-	background: #000 url(/images/brand/white_lightning.png) center center no-repeat;
-	border: 4px solid #000;
 }
 
 figure.hover_select.poke.done div.circle {
@@ -1276,10 +1022,9 @@ background-image: url(http://postimage.org/image/f8emk5o7l/)
 /*
 
 
+/*
+ Changes Below this point are fine
 */
-<!-- ====================================== -->
-<!-- ! Changes Below this point are fine.   -->
-<!-- ====================================== -->
 a:hover, article h2 a:hover {
   color: #00CC33;
 }
@@ -1311,5 +1056,7 @@ background: #a7cede;
  color: #fff;
   text-shadow: none; 
 }
+</style>
+  <% end %>
 </body>
 </html>
