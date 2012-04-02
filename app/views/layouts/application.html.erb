@@ -58,8 +58,6 @@
       <%= yield %>
     </div>
   </div>
- </body>
-
   <%= javascript_include_tag 'application' %>
 
   <% if CONFIG['google_analytics_id'] %>
@@ -70,8 +68,9 @@
       g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+    <% end %>
+    </body>
     <style>
-
 article h2 a {
 	color: black;
 	text-decoration: none;
@@ -1057,4 +1056,3 @@ background: #a7cede;
 }
 </style>
 </html>
-  <% end %>
