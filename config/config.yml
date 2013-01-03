@@ -10,4 +10,4 @@ email:               chandler@chandlercollins.com
 photos:              http://chandlercollins.500px.com
 quote.fm:            http://quote.fm/chandlercollins
 google_analytics_id: UA-30391915-1
-disqus_shortname:    <%= ENV.fetch("disqus_shortname") { "chandlercollins" } %>
+
