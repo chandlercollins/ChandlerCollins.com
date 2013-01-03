@@ -1,3 +1,4 @@
+
 /* TODO: pull out coloring into variables */
 $linkhover: red;
 
@@ -275,16 +276,8 @@ fieldset.markdown {
   color: #fff;
 }
 
-/*.button.space-top {
+.button.space-top {
   margin-top: 100px;
-}*/
-.button {	 	
-  &.space-top {
-  	margin-top: 50px; 	
-  	}	 	
-  &.space-bottom {	 	
-	margin-bottom: 50px;
-	}	
 }
 
 .left {
