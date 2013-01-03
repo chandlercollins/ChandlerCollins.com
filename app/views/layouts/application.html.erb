@@ -24,6 +24,9 @@
       <% if CONFIG['photos'] %>
         <li><%= link_to 'photos', '' +CONFIG['photos'] %></li>
       <% end %>
+      <% if CONFIG['quote.fm'] %>
+         <li><%= link_to 'quote.fm', '' + CONFIG['quote.fm'] %></li>
+      <% end %>
       <li><%= link_to 'say hi', "mailto:#{CONFIG['email']}?subject:whats up!" %></li>
       <li><%= link_to 'rss feed', '/posts.rss' %></li>
     </ul>
